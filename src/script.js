@@ -18,17 +18,17 @@ function classifyHero() {
      } else if (heroXP <= 2000) {
        level = 'Bronze';
      } else if (heroXP <= 5000) {
-       level = 'Prata';
+       level = 'Silver';
      } else if (heroXP <= 7000) {
-       level = 'Ouro';
+       level = 'Gold';
      } else if (heroXP <= 8000) {
-       level = 'Platina';
+       level = 'Platinum';
      } else if (heroXP <= 9000) {
-       level = 'Ascendente';
+       level = 'Ascending';
      } else if (heroXP <= 10000) {
-       level = 'Imortal';
+       level = 'Immortal';
      } else {
-       level = 'Radiante';
+       level = 'Radiant';
      }
 
      const resultDiv = document.getElementById('result');
@@ -37,16 +37,15 @@ function classifyHero() {
 }
 
 function displayMessage(message) {
-     // Criar um elemento para exibir a mensagem na página
+     
      const messageDiv = document.createElement('div');
-     messageDiv.style.color = 'red'; // Cor da mensagem (opcional)
+     messageDiv.style.color = 'red'; 
      messageDiv.textContent = message;
    
-     // Adicionar o elemento à página
-     document.body.appendChild(messageDiv);
+     const borderContainer = document.querySelector('.border');
+     borderContainer.appendChild(messageDiv);
    
-     // Remover a mensagem após alguns segundos (opcional)
      setTimeout(() => {
-       document.body.removeChild(messageDiv);
-     }, 4000); // Remover após 4 segundos (ajuste conforme necessário)
+       borderContainer.removeChild(messageDiv);
+     }, 4000); 
    }

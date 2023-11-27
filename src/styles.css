@@ -7,11 +7,26 @@ body {
   justify-content: center;
   height: 100vh;
   margin: 0;
+  background-color: #826ac4;
 }
+
+.border {
+  border: 10px ridge #3498db; 
+  padding: 20px 50px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 60px;
+  background-color: beige;
+  height: 500px;
+  width: 800px;
+ }
 
 h1 {
   font-family: 'Press Start 2P', cursive;
   color: #826ac4;
+  margin-bottom: 50px;
 }
 
 form {
@@ -21,6 +36,16 @@ form {
 label, input {
   display: block;
   margin-bottom: 10px;
+}
+
+#heroName, #heroXP {
+  border-radius: 10px;
+  height: 40px;
+  font-size: 18px;
+}
+
+label {
+  margin-top: 40px;
 }
 
 button {
@@ -37,7 +62,7 @@ button:hover {
 }
 
 #result {
-  margin-top: 20px;
+  margin-top: 10px;
   font-weight: bold;
 }
 
