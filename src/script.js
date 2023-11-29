@@ -1,17 +1,23 @@
 function classifyHero() {
      const heroName = document.getElementById('heroName').value;
-     const heroXPInput = document.getElementById('heroXP');
-     const heroXP = parseInt(heroXPInput.value);
+     const heroXP = parseInt(document.getElementById('heroXP').value);
+
+     if (!heroName) {
+          displayMessage("Por favor, informe o nome do herói.");
+          document.getElementById('heroName').focus();
+          return;
+          
+     }
      
-     if (isNaN(heroXP)) {
-          displayMessage("Por favor, informe a experiência (XP) do Herói.");
-          heroXPInput.focus();
+     if (!heroXP) {
+          displayMessage("Por favor, informe a experiência (XP) do herói.");
+          document.getElementById('heroXP').focus();
           return;
         }
      
      let level;
    
-     if (heroXP < 0 || heroXP === "" ){
+     if (heroXP < 0 ){
        level = "Invalid XP! Enter numbers starting from 0 (zero)";
      } else if (heroXP <= 1000) {
        level = 'Iron';
@@ -32,15 +38,17 @@ function classifyHero() {
      }
 
      const resultDiv = document.getElementById('result');
-     resultDiv.innerHTML = `The Hero named ${heroName} is at level ${level}.`;
+     resultDiv.innerHTML = `The Hero named <span class="hero-name">${heroName.toUpperCase()}</span> is at level <span class="hero-XP">${level}</span>.`;
+     resultDiv.classList.add('visible');
 
 }
 
 function displayMessage(message) {
      
      const messageDiv = document.createElement('div');
-     messageDiv.style.color = 'red'; 
      messageDiv.textContent = message;
+
+     messageDiv.classList.add('message');
    
      const borderContainer = document.querySelector('.border');
      borderContainer.appendChild(messageDiv);
@@ -49,3 +57,5 @@ function displayMessage(message) {
        borderContainer.removeChild(messageDiv);
      }, 4000); 
    }
+
+   
