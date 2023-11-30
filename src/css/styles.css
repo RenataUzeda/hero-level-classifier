@@ -1,7 +1,7 @@
-@import url('./reset.css');
+@import url("./reset.css");
 
 body {
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -13,8 +13,8 @@ body {
 }
 
 .border {
-  border: 10px ridge #3498db; 
-  padding: 20px 50px; 
+  border: 10px ridge #3498db;
+  padding: 20px 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,10 +23,10 @@ body {
   background-color: beige;
   height: 500px;
   width: 800px;
- }
+}
 
 h1 {
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
   font-size: 35px;
   color: #826ac4;
   margin-bottom: 50px;
@@ -36,7 +36,8 @@ form {
   margin: 20px;
 }
 
-label, input {
+label,
+input {
   display: block;
   margin-bottom: 10px;
 }
@@ -45,7 +46,8 @@ input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
 
-#heroName, #heroXP {
+#heroName,
+#heroXP {
   border-radius: 10px;
   height: 40px;
   font-size: 18px;
@@ -68,7 +70,7 @@ button {
 }
 
 button:hover {
-  background: linear-gradient(to right, #FF98db, #2980b9);
+  background: linear-gradient(to right, #ff98db, #2980b9);
 }
 
 #result.visible {
@@ -79,7 +81,7 @@ button:hover {
   margin-top: 10px;
   font-weight: bold;
   color: rgb(25, 0, 255);
-  background-color:rgb(177, 223, 235);
+  background-color: rgb(177, 223, 235);
   padding: 10px;
   border-radius: 10px;
   display: none;
@@ -91,7 +93,7 @@ button:hover {
   color: red;
 }
 
-.hero-name, .hero-XP {
+.hero-name,
+.hero-XP {
   color: green;
-
 }
